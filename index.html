@@ -3,11 +3,21 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="style.css"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
         <title>Dark mode with SCSS</title>
     </head>
     <body>
+        <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+
+        <label class="switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider">
+                <ion-icon name="sunny"></ion-icon>
+            </div>
+        </label>
+
         <div class="container">
-            <h1>Hello, I'm a light theme</h1>
+            <h1>Hello, I'm a <span id="title">light</span> theme</h1>
             <legend>Created the 26/05/2016 at 18:24</legend>
     
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in ipsum et purus egestas volutpat. In ultricies aliquet consequat. Proin arcu est, ullamcorper quis mollis ac, ornare vel leo. Donec pellentesque gravida tincidunt. Nam tristique, turpis sed ullamcorper suscipit, eros magna tincidunt sapien, eget facilisis est nibh sit amet tortor.</p>
@@ -16,5 +26,7 @@
             <button>I'm useless</button>
             <a href="#">Me too ...</a>
         </div>
+
+        <script type="text/javascript" src="dark_mode.js"></script>
     </body>
 </html>

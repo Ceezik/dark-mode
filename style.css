@@ -5,6 +5,7 @@
   --bg-color: white;
   --heading-color: #333333;
   --primary-color: #0652DD;
+  --secondary-color: #eeeeee;
 }
 
 /* Those ones will be used in the dark theme */
@@ -13,6 +14,7 @@
   --bg-color: #121212;
   --heading-color: #e6e7f0;
   --primary-color: #EA2027;
+  --secondary-color: #525252;
 }
 
 body {
@@ -20,11 +22,53 @@ body {
   padding: 0;
   font-family: "Montserrat", sans-serif;
   background-color: var(--bg-color);
+  transition: background-color 0.2s ease;
+}
+
+.switch {
+  width: 3.6em;
+  height: 2em;
+  border-radius: 20px;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  cursor: pointer;
+  background-color: var(--secondary-color);
+}
+
+.switch > input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  top: 0.2em;
+  left: 0.2em;
+  height: 1.6em;
+  width: 1.6em;
+  background-color: white;
+  border-radius: 100px;
+  text-align: center;
+  line-height: 1.8em;
+  transition: all 0.3s ease;
+}
+
+input:checked + .slider {
+  left: 1.8em;
+}
+
+input:checked + .slider > ion-icon {
+  color: #ced6e0;
+  transform: scaleX(-1);
+}
+
+ion-icon {
+  color: #FFC312;
 }
 
 .container {
   width: 50%;
-  margin-top: 3em;
+  margin-top: 5em;
   margin-left: 50%;
   transform: translateX(-50%);
 }
@@ -81,7 +125,7 @@ a:after {
   left: 0%;
   width: 25%;
   background-color: var(--primary-color);
-  transition: 0.3s ease;
+  transition: width 0.3s ease;
 }
 
 a:hover:after {
