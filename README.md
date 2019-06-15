@@ -2,6 +2,8 @@
 
 Here is an example of dark mode implementation using HTML, SCSS and JavaScript.
 
+![Example of dark mode](example.gif)
+
 ### Operation
 
 - Colors for light and dark theme are specified in SCSS variables
